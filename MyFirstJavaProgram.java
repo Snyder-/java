@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Scanner; // import the Scanner class from util library
 
 public class MyFirstJavaProgram {
    public static void main(String []args) {

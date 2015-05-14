@@ -22,15 +22,18 @@ public class MyFirstJavaProgram {
             System.out.println("FizzBuzz");
             sumOfFifteen += i;
          // check if int i is evenly divided into 5, print buzz, and add i to sum of divis by 5
-         }else if(i % 5 == 0) {
+         }
+         else if(i % 5 == 0) {
             System.out.println("Buzz");
             sumOfFive += i;
          // check if int i is evenly divided into 3 and 5, print fizzbuzz, and add i to sum of divis by 3
-         }else if(i % 3 == 0) {
+         }
+         else if(i % 3 == 0) {
             System.out.println("Fizz");
             sumOfThree += i;
          // print the number if not divisible by 3 + 5, 5, or 3
-         }else {
+         }
+         else {
             System.out.println(i);
          }
       }

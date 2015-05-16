@@ -1,3 +1,12 @@
+/* Module 1-3  Program by Sean Snyder, written on 5-14-2015
+
+   
+   Write a program that prompts the user to input a decimal number and ouputs
+   the number rounded to the nearest integer.
+
+
+*/
+
 // import the Scanner class from util library
 import java.util.Scanner;
 
@@ -19,8 +28,8 @@ public class RoundToNearestInteger {
   // the main method which runs automatically when the program is executed
   public static void main(String []args) {
     // instantiate RoundToNearestInteger object
-    RoundToNearestInteger decimalizer = new RoundToNearestInteger();
+    RoundToNearestInteger decimalToInteger = new RoundToNearestInteger();
     // call convert method on new object
-    decimalizer.convert();
+    decimalToInteger.convert();
   }
 }

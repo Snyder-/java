@@ -1,9 +1,21 @@
-# Experimenting with Java
+# Module 1
 
-### IT 145 - Intro to Software Development
+## Problem 1.3 - RoundToNearestInteger
+
+#### Output
+
+~~~~~ Decimal to Rounded Integer Converter ~~~~~
+
+Enter a decimal number to round to the nearest integer:
+299.34
 
 
-#### Output from ApplicationSalaryCalculator
+You entered: 299.34
+The rounded number is: 299
+
+## Problem 1.4 - ApplicationSalaryCalculator
+
+#### Output
 
 ~~~~~ Joe's Salary ~~~~~
 

@@ -17,26 +17,42 @@
    method to calculate the salary.
  */
 
-import java.text.DecimalFormat;
-
 public class ApplicationSalaryCalculator {
   // class method salary which takes a name, jobs completed, and job rate
-  public void salary(String name, int jobsCompleted, double jobRate) {
+  public double calculateSalary(Employee employee) {
+    return (employee.getJobsCompleted() * employee.getJobRate());
+  }
+  public double salary(Employee employee) {
     // multiply the amount of jobs completed by the job rate
-    double totalSalary = jobsCompleted * jobRate;
+    double totalSalary = calculateSalary(employee);
     // print out to the console using concatenation
-    System.out.println("~~~~~ " + name + "'s Salary ~~~~~");
-    System.out.println("\n" + name + " completed " + jobsCompleted + " jobs");
+    System.out.println("~~~~~ " + employee.getName() + "'s Salary ~~~~~");
+    System.out.printf("\n" + employee.getName() + " completed " + employee.getJobsCompleted() +
+                      " jobs @ $%.2f\n", employee.getJobRate());
     // print to console with printf which allows format specification
     // there are many different ways to do this with BigDecimal, DecimalFormat etc
-    System.out.printf(name + " earned $%.2f\n\n", totalSalary );
+    System.out.printf(employee.getName() + " earned $%.2f\n\n", totalSalary );
+    return totalSalary;
   }
 
-  public static void main(String []args) {
+  public void combinedSalary(Employee employeeOne, Employee employeeTwo) {
+   // class method to take an array of both people, rates, and jobs completed
+   // Calculate combined salaries
+   System.out.printf(employeeOne.getName() + "'s and " + employeeTwo.getName() +
+                     "'s combined salaries: $%.2f\n\n" , calculateSalary(employeeOne)
+                      + calculateSalary(employeeTwo));
+}
+
+  public static void main(String[] args) {
     // instantiate ApplicationSalaryCalculator object
     ApplicationSalaryCalculator salaryConverter = new ApplicationSalaryCalculator();
-    // call salary method with Jim and Joe's data
-    salaryConverter.salary("Jim", 5, 5000.00);
-    salaryConverter.salary("Joe", 10, 10000.00);
+    // instantiate two employees
+    Employee joe = new Employee("Joe", 5, 5000.00);
+    Employee jim = new Employee("Jim", 10, 10000.00);
+    // call salary method on each employee to get their salary information
+    salaryConverter.salary(joe);
+    salaryConverter.salary(jim);
+    // call combinedSalary method to add two employees salaries together
+    salaryConverter.combinedSalary(joe, jim);
   }
 }

@@ -11,6 +11,7 @@ Enter a decimal number to round to the nearest integer:
 
 
 You entered: 299.34
+
 The rounded number is: 299
 
 ## Problem 1.4 - ApplicationSalaryCalculator

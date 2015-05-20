@@ -12,7 +12,7 @@ public class HelloWorldFrame extends JFrame {
     JLabel jlbHelloWorld = new JLabel("Hello World");
     add(jlbHelloWorld);
     this.setSize(100, 100);
-    // pack();
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
     setVisible(true);
   }
 }

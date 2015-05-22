@@ -37,7 +37,7 @@ public class KilogramToPounds {
        Checks to see if there are letters or no input in the textfield. 
        Exception handling for getting a double from a string input.
        Calculates conversion by multiplying kilograms by 2.2.
-       Clears content the textfield when button is clicked.
+       Clears content from the textfield when button is clicked.
     */
     button.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent ae) {

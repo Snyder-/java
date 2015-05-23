@@ -47,7 +47,7 @@ public class KilogramToPounds {
         }else {
            try {
              kilogram = Double.parseDouble(textField.getText()) * 2.2; 
-             answer.setText(String.valueOf(kilogram));
+             answer.setText(String.format("%.2f", kilogram));
            }
            catch ( Exception number_format ) {
              answer.setText("No letters please!");

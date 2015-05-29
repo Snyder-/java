@@ -19,7 +19,7 @@ public class KiloToLbs {
       userResponse = JOptionPane.showInputDialog("Please enter a persons mass in kilograms:");
       kilograms = Double.parseDouble(userResponse);
       inPounds = kilograms * 2.2;
-      conversion = "The persons weight is " + String.format("%.2f",inPounds) + " pounds.";
+      conversion = String.format("The persons weight is %.2f pounds.",inPounds);
       JOptionPane.showMessageDialog(null, conversion, "Kilograms converted to Pounds", JOptionPane.INFORMATION_MESSAGE);
       System.exit(0);
     }catch(Exception e) {

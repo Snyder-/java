@@ -3,7 +3,8 @@
  *
  * Program prompts the user to enter three numbers to be sorted. Each string response is
  * parsed into an integer and stored in an integer array.  The array is sorted and the user
- * is shown the sorted data.
+ * is shown the sorted data. Added exception handling if someone escapes during entering
+ * numbers or decline to continue in the beginning. 
  *
  * */
 

@@ -1,0 +1,80 @@
+/*  Module 5 - Sean Snyder - 6/10/2015
+ *  IT 145 - Professor Fleming
+ * 
+ *  A program that declares an array of doubles.  The first 25 are elements equal to the square
+ *  of their index.  The last 25 are elements equal to three times their index.
+ */
+
+public class AlphaArray {
+	private double[] alpha;
+	private int perLines;
+
+	public AlphaArray(int elementsPerLine) { // create a public constructor that will call the
+							// populate method
+		this.perLines = elementsPerLine;
+		this.populate();
+	}
+
+	/*
+	 * The populate method assigns values to each index based on their position
+	 * in the array. Element values 0 through 24 will be squared from their
+	 * index while 25-50 will be index times three.
+	 */
+
+	private void populate() {
+		alpha = new double[50];
+		for (int i = 0; i <= 49; i++) {
+			if (i < 25)
+				alpha[i] = i * i;
+			else
+				alpha[i] = i * 3;
+		}
+	}
+
+	// toString method override. This also calls the output.
+
+	public String toString() {
+		try {
+			this.output();
+		} catch (ArithmeticException e) {
+			System.err
+					.println("You tried to divide by zero.\nOutputting 5 results per line...");
+			new AlphaArray(5).output();
+		}
+		System.out.println();
+		return String.format("Double array of %s items.", alpha.length);
+	}
+
+	/*
+	 * Created an output method that takes the amount of output per line and
+	 * will loop through and output the sets depending on the per line variable.
+	 * The first for loop will is based on the total lines of output. (ie. 10
+	 * per line is 5 lines of output for 50 elements)
+	 * 
+	 * The second for loop inside starts at index 0 prints the amount of
+	 * elements per line, then adds the amount perline to the begin variable to
+	 * keep track of placement.
+	 */
+
+	private void output() {
+		if(alpha.length % perLines != 0) {
+			System.err.println("The amount per line must be evenly divisible into 50...(ie. 1,2,5,10)");
+			System.exit(1);
+		}
+		int format = alpha.length / perLines;
+		int begin = 0;
+
+		for (int j = 0; j < format; j++) {
+			for (int i = begin; i < (begin + perLines); i++) {
+				System.out.printf("%5d: %5s ", (i + 1), alpha[i]);
+			}
+			System.out.println();
+			begin += perLines;
+		}
+	}
+
+	public static void main(String[] args) {
+		AlphaArray aa = new AlphaArray(3);
+		System.out.println(aa);
+	}
+}

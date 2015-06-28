@@ -1,8 +1,8 @@
 /*  Module 1.4 Practice problem by Sean Snyder 5/16/2015
-   
+
     This class is an used in the main application for calculating
     the salary of an employee.
-    
+
  */
 
 public class Employee {
@@ -21,7 +21,7 @@ public class Employee {
    public void setJobsCompleted( int jobsCompleted ){
        this.jobsCompleted = jobsCompleted;
    }
-   
+
    // getter methods for employee
    public String getName() {
      return employeeName;
@@ -33,7 +33,7 @@ public class Employee {
       return jobRate;
    }
    public static void main(String []args) {
-      /* Nothing to run here since it is 
-         just to instantiate employees  */
+     /* Nothing to run here since it is
+        just to instantiate employees  */
    }
 }

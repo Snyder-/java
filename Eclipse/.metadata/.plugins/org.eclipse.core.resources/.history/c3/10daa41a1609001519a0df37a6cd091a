@@ -1,0 +1,9 @@
+package lesson_1;
+
+public class EmployeeReportFormatter {
+	Employee anEmployee;
+	
+	public void getFormattedEmployee(Employee employee) {
+		
+	}
+}

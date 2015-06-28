@@ -1,0 +1,42 @@
+public class AlphaArray {
+	private double[] alpha;
+	
+	
+	public AlphaArray() {
+		System.out.println("Double array created with 50 elements.");
+		this.populate();
+	}
+	
+	private void populate() {
+		alpha = new double[50];
+		for (int i = 0; i <= 49; i++) {
+			if (i < 26)
+				alpha[i] = i * i;
+			else
+				alpha[i] = i * 3;
+		}
+	}
+
+	public String toString() {
+		this.output(10);
+		return String.format("Double array of %s items.", alpha.length);
+	}
+
+	private void output(int perLine) {
+		int format = alpha.length / perLine;
+		int begin = 0;
+		
+		for (int j = 0; j < format; j++) {
+			for (int i = begin; i < (begin + perLine); i++) {
+				System.out.print(alpha[i] + " ");
+			}
+			System.out.println();
+			begin += perLine;
+		}
+	}
+
+	public static void main(String[] args) {
+		AlphaArray aa = new AlphaArray();
+		System.out.println(aa);
+	}
+}

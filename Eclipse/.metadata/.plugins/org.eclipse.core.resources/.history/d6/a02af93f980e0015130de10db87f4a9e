@@ -1,0 +1,29 @@
+package domain;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileWriter {
+	private static File filename;
+	private static FileOutputStream fos;
+	private static File fsr;
+	
+	public static void write(String path, Object data) {
+		prepareWriter(path, data);
+	}
+	
+	private static void prepareWriter(String path, Object data) {
+		try(FileOutputStream fos = new FileOutputStream(filename)) {
+			fos.write(b);write(data.toString());
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		write("text.txt", new FileWriter());
+	}
+
+}

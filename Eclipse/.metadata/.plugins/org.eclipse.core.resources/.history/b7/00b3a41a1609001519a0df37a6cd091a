@@ -1,0 +1,22 @@
+package lesson_1;
+
+public class Employee {
+	public long id;
+	public String name;
+	public String department;
+	public Boolean working;
+	
+	public Employee(int id, String name, String department) {
+		this.id = id;
+		this.name = name;
+		this.department = department;
+	}
+	
+	public String toString() {
+		return String.format("Employee: %s\nId: %d\nDepartment: %s",name,id,department);
+	}
+
+	public String getName() {
+		return this.name;
+	}
+}

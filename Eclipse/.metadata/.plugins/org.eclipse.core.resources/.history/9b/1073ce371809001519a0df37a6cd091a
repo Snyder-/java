@@ -1,0 +1,13 @@
+package lesson_1;
+
+public class Television implements Device {
+
+	public void on() {
+		System.out.println("TV turning on...");
+	}
+
+	public void off() {
+		System.out.println("TV shutting off...");
+	}
+
+}

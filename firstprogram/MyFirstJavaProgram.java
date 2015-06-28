@@ -4,17 +4,17 @@ public class MyFirstJavaProgram {
    public static void main(String []args) {
       // Say hello to the word
       System.out.println("Hello World");
-      
+
       // initialize a scanner for System input
       Scanner userInputScanner = new Scanner(System.in);
       System.out.println("Fizzbuzz: Enter the number of iterations to check...");
       int numberUpTo = userInputScanner.nextInt();
-      
+
       // declare and set integer variables to store sum of each divisible category
       int sumOfFifteen = 0;
       int sumOfFive = 0;
       int sumOfThree = 0;
-      
+
       // for loop to from 1 to 100 to check for divisibility at each number
       for(int i = 1; i <= numberUpTo; i++) {
          // check if int i is evenly divided into 3 and 5, print fizzbuzz, and add i to sum of divis 3+5

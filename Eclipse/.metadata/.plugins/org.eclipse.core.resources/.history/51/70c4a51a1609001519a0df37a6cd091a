@@ -1,0 +1,19 @@
+package lesson_1;
+
+public class ClientModule {
+	public static void hireNewEmployee(Employee employee){
+		System.out.println("Employee hired.");
+	}
+	public static void terminateEmployee(Employee employee) {
+		
+	}
+	public static void printEmployeeReport(Employee employee) {
+		System.out.println(employee.toString());
+	}	
+	
+	public static void main(String[] args) {
+		Employee newhire = new Employee(30, "Sean Snyder", "Programmer");
+		hireNewEmployee(newhire);
+		printEmployeeReport(newhire);
+	}
+}

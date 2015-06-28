@@ -1,0 +1,11 @@
+package lesson_1;
+
+public class EmployeeDAO {
+	public void saveToDatabase(Employee name) {
+		System.out.println(name.getName());
+	}
+	
+	public void deleteFromDatabase() {
+		
+	}
+}

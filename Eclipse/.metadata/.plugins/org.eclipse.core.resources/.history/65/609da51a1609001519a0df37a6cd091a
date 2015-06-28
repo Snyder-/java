@@ -1,0 +1,15 @@
+package lesson_1;
+
+public class ReportFormatter {
+	
+	private void convertObjectToXML(Object obj) {
+		
+	}
+	
+	private void convertObjectToCSV(Object obj) {
+		
+	}
+	public String getFormattedValue() {
+		return "formatted value";
+	}
+}

@@ -1,0 +1,24 @@
+package lesson_1;
+
+public class RemoteControl {
+	private static Device connectedDevice;
+	
+	private RemoteControl() {
+	}
+	public void turnOn() {
+		connectedDevice.on();
+	}
+	
+	public void turnOff() {
+		connectedDevice.off();
+	}
+	public static RemoteControl getInstance() {
+		return new RemoteControl();
+	}
+	
+	public static RemoteControl connectToDevice(Device name) {
+		connectedDevice = name;
+		System.out.println("Connected to " +name.toString());
+		return getInstance();
+	}
+}

@@ -1,0 +1,11 @@
+package lesson_1;
+
+public class Person {
+	public static void main(String[] args) {
+		RemoteControl rc = new RemoteControl();
+		Television tv = new Television("Sony Bravia");
+		
+		rc.turnOn(tv);
+		rc.turnOff(tv);
+	}
+}

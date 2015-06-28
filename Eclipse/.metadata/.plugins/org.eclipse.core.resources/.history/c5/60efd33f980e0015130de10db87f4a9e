@@ -1,0 +1,28 @@
+package domain;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.Writer;
+
+public class FileWriter {
+	private static Writer fis;
+	private static BufferedWriter bw;
+	
+	public static void write(String path, Object data) {
+		prepareWriter(path, data);
+	}
+	
+	private static void prepareWriter(String path, Object data) {
+		try(BufferedWriter bw = new BufferedWriter(fis)) {
+			bw.write(data.toString());
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		write("text.txt", new FileWriter());
+	}
+
+}

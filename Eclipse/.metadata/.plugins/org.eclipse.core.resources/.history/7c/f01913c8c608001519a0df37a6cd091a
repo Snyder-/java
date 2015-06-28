@@ -1,0 +1,16 @@
+package lesson_1;
+
+public class Vehicle {
+	public void startEngine(){
+		System.out.println("Engine started...");
+		
+	}
+	
+	public void stopEngine(){
+		System.out.println("Engine stopped...");
+	}
+	
+	public void accelerate(){
+		System.out.println("Car accelerated...");
+	}
+}

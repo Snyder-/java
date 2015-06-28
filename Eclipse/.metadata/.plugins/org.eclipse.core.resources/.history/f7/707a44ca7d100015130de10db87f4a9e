@@ -1,0 +1,46 @@
+public class Marathon {
+	private double[] milesList;
+	private Double totalMilesRun;
+	private double averageMilesRan;
+
+	public Marathon() {
+		this.initArray();
+		this.output();
+	}
+
+	private void initArray() {
+		milesList = new double[10];
+		double weeksLeft = 9;
+		double totalMiles = 26;
+		double weekOneMiles = 2;
+		milesList[0] = weekOneMiles;
+		totalMilesRun = (double) 0;
+		totalMilesRun += weekOneMiles;
+
+		double increase = (totalMiles - weekOneMiles) / weeksLeft;
+
+		for (int i = 0; i < weeksLeft; i++) {
+			milesList[i + 1] = milesList[i] + increase;
+			totalMilesRun += milesList[i + 1];
+		}
+		
+		averageMilesRan = totalMilesRun / 10;
+	}
+
+	private void output() {
+		for (int i = 0; i < milesList.length; i++) {
+			System.out.printf("Week #%2s -- %2.2f miles ran.\n", (i+1), milesList[i]);
+		}
+		System.out.printf("\n1. The array will need to be initialized with 10 values.");
+		System.out.printf("\n2. Value of the array element with index of 2 is %.2f.", milesList[2]);
+		System.out.printf("\n3. The length of the list is %s.", milesList.length);
+		System.out.printf("\n4a. At the end of 10 weeks, you will have run %.2f miles.",totalMilesRun);
+		System.out.printf("\n4b. At the end of 10 weeks, you will have run an average of %.2f miles per week.", averageMilesRan);
+		System.out.printf("\n5. Is the 4 on the list? %s", milesList[4]);
+		
+	}
+
+	public static void main(String[] args) {
+		Marathon boston = new Marathon();
+	}
+}

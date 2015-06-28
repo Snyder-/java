@@ -1,0 +1,14 @@
+package lesson_1;
+
+public class Person {
+	public static void main(String[] args) {
+		Television tv = new Television("Sony Bravia");
+		Projector pj = new Projector("Epson projector 2000");
+		RemoteControl.connectToDevice(tv).turnOn();
+		RemoteControl.connectToDevice(pj).turnOn();
+		
+		RemoteControl rc = RemoteControl.getInstance();
+		rc.turnOn();
+		
+	}
+}

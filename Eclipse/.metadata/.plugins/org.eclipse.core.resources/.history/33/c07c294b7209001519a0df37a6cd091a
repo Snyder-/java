@@ -1,0 +1,14 @@
+package lesson_1;
+
+public class RemoteControl {
+	public void turnOn(Device dname) {
+		dname.on();
+	}
+	
+	public void turnOff(Device dname) {
+		dname.off();
+	}
+	
+	public static void connectToDevice() {
+	}
+}
